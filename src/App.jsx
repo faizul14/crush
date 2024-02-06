@@ -23,7 +23,7 @@ const gif = [
 function App() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
-  const yesButtonSize = noCount * 20 + 16;
+  const yesButtonSize = noCount * 30 + 16;
 
   const [gef, setGef] = useState(0);
 
@@ -41,7 +41,7 @@ function App() {
   }
 
   function getNoButtonText() {
-    return phrases[Math.min(noCount === phrases.length ? 0 : noCount, phrases.length - 1)];
+    return phrases[Math.min(noCount, phrases.length - 1)];
   }
 
   return (
